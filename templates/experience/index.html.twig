@@ -1,13 +1,14 @@
 {# templates/experience/index.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}Expérience | Mon Portfolio{% endblock %}
+{% block title %}Expériences | Mon Portfolio{% endblock %}
 
 {% block body %}
-    <h1>Bienvenue sur mes expérience !</h1>
-    <p>Voici la page de mes expérience de mon portfolio Symfony.</p>
+    <h1>Bienvenue sur mes expériences !</h1>
+    <p>Voici la page de mes expériences de mon portfolio Symfony.</p>
 	
 	<a href="{{ path('app_home') }}">Voir la page d'accueil</a>
     <a href="{{ path('app_presentation') }}">Voir ma présentation</a>
     <a href="{{ path('app_experience') }}">Voir mes expériences</a>
+    <a href="{{ path('app_certification') }}">Voir mes certifications</a>
 {% endblock %}
