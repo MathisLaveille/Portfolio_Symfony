@@ -4,14 +4,24 @@
 {% block title %}Accueil | Mon Portfolio{% endblock %}
 
 {% block body %}
-    <h1>Bienvenue sur mon portfolio !</h1>
-    <p>Voici la page d'accueil de mon portfolio Symfony.</p>
-	
-	<a href="{{ path('app_home') }}">Voir la page d'accueil</a>
-    <a href="{{ path('app_presentation') }}">Voir ma présentation</a>
-    <a href="{{ path('app_experience') }}">Voir mes expériences</a>
-    <a href="{{ path('app_certification') }}">Voir mes certifications</a>
-    <a href="{{ path('app_competence') }}">Voir mes compétences</a>
-    <a href="{{ path('app_veille_numerique') }}">Voir ma veille numérique</a>
-    <a href="{{ path('app_mention_legale') }}">Mentions légales</a>
+
+    <div class="container">
+        <h1>Bienvenue sur mon portfolio !</h1>
+        
+    
+        <h1>PROFIL</h1>
+    
+        <p>
+            – A PROPOS DE MOI
+            <br> <br>
+            Je m’appelle Laveille Mathis, j’ai 18 ans. Je suis actuellement en BTS SIO prépa à l’école Notre Dame de la Providance a Avranches avec l'option SLAM (Solutions Logicielles et Applications Métier)
+            <br>
+            Dès mon plus jeune âge j’ai commencé à me passionner pour l’informatique.
+            <br>
+            J'ai donc fait un bac général avec la spésialité NSI en terminale (Numérique et science de l'informatique) au lycée Notre Dame De La Providance à Avranches.
+            <br>
+            Au cours de ces années de Lycée, je me suis passionné pour l’informatique mais plus particulièrement pour le développement, ce qui explique mon choix pour l’option SLAM.
+        </p>
+    </div>
+
 {% endblock %}

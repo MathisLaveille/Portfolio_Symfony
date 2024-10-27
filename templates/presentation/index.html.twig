@@ -4,14 +4,70 @@
 {% block title %}Présentation | Mon Portfolio{% endblock %}
 
 {% block body %}
-    <h1>Bienvenue sur ma présentation !</h1>
-    <p>Voici la page de présentation de mon portfolio Symfony.</p>
 
-    <a href="{{ path('app_home') }}">Voir la page d'accueil</a>
-    <a href="{{ path('app_presentation') }}">Voir ma présentation</a>
-    <a href="{{ path('app_experience') }}">Voir mes expériences</a>
-    <a href="{{ path('app_certification') }}">Voir mes certifications</a>
-    <a href="{{ path('app_competence') }}">Voir mes compétences</a>
-    <a href="{{ path('app_veille_numerique') }}">Voir ma veille numérique</a>
-    <a href="{{ path('app_mention_legale') }}">Mentions légales</a>
+    <div class="container">
+
+        <h1>Ma présentation !</h1>
+
+        <br> <br> <br> <br>
+
+        <h2>Page de présentation</h2>
+
+        <p>
+            Je m’appelle Laveille Mathis, j’ai 18 ans et je suis actuellement en BTS SIO (Services Informatiques aux organisations) avec l’option prépa et slam pour ensuite intégrer une école d’ingénieur en informatique. J’adore tout ce qui touche a la programmation et à la cyber sécurité
+        </p>
+        <br> <br> <br> <br>
+
+
+        <h2>C'est quoi le BTS SIO à Notre Dame De La Providance à Avranches ?</h2>
+        <p>
+            Le BTS SIO (Services Informatiques aux Organisations) est une formation de niveau bac+2 en France. Il est destiné à former des techniciens supérieurs capables de prendre en charge les services informatiques au sein des organisations.
+        <p>
+        <br> <br> <br> <br>
+
+        <table>
+    
+        <caption> <h3> Dans le BTS SIO nous avons deux spécialités : </h3> <br><br><br> </caption>
+            <tbody><tr> 
+                <th> BTS SIO SLAM </th> 
+                <th> BTS SIO SISR </th> 
+                <th> Prépa ISEN </th> 
+            </tr>
+
+            <tr> 
+                <td>SLAM signifie "Solutions Logicielles et Applications Métier"<br>
+                    L’option SLAM est principalement destinée aux étudiants qui s’orientent vers les métiers liés à la conception et la maintenance de programmes applicatifs. Donc grâce à des cours spécifiques, les diplômés seront capables de gérer un parc informatique ou d’administrer un réseau au sein d’une entreprise. Aussi ils pourront également gérer l’intégration, la sécurisation et la configuration des serveurs, mais aussi des postes clients et des équipements d’interconnexion. </td> 
+
+                <td>L’acronyme SISR signifie « Solutions d’infrastructure, systèmes et réseaux ».
+                    L’option SISR est donc d’abord destinée aux étudiants qui s’orientent vers les métiers liés à la conception et la maintenance d’infrastructures réseaux. Avant tout cela correspond à assurer la sécurité, la maintenance et l’installation des réseaux et des équipements informatiques font partie des principales missions des futurs administrateurs, techniciens ou pilotes d’exploitation. </td> 
+
+                <td>
+                    Le BTS, depuis cette année à ajouter une prépa pour une école d'ingégnieur? pour intégrer ce BTS prépa, les étudiants devront être acceptés à poursuivre chaque semaine six heures de plus qu’en BTS classique.  Ces six heures supplémentaires de maths, physique, anglais et sciences humaines devront permettre d’entrer plus doucement dans le cursus. 
+                </td>
+            </tr>
+
+            <tr> 
+                <td>Voici quelques exemples de métiers que les étudiants peuvent exercer après le BTS SIO option SLAM :
+
+                    Développeur d’applications informatiques
+                    Chargé d’études informatiques
+                    Responsable des services applicatifs
+                    Programmeur analyste
+                    Programmeur d’applications
+                    Technicien d’études informatiques</td> 
+
+                <td>Donc voici quelques exemples de métiers que les étudiants peuvent exercer après le BTS SIO option SISR :
+
+                    Technicien réseau — télécoms
+                    Technicien systèmes et réseaux
+                    Administrateur systèmes et réseaux
+                    Support systèmes et réseaux
+                    Technicien d’infrastructure
+                    Pilote d’exploitation
+                    Technicien de production</td> 
+            </tr>
+
+        </tbody></table>
+    </div>
+    
 {% endblock %}

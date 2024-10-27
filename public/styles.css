@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar verticale */
+.navbar-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(53, 51, 83, 1);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Styles des liens dans la navbar comme boutons */
+.navbar-vertical-link a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color: #4A4A78;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+/* Effet de survol */
+.navbar-vertical-link a:hover {
+    background-color: #333353;
+    transform: scale(1.05);
+}
+
+.navbar-vertical h2 a {
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Enlève le soulignement */
+    font-size: 24px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras pour le distinguer */
+}
+
+.navbar-vertical h2 a:hover {
+    color: #cacaca; /* Couleur au survol (or par exemple) */
+}
+
+/* Conteneur principal avec marge à gauche pour éviter le chevauchement */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 260px;
+}
+
+header {
+    background-color: #333;
+    padding: 15px;
+    text-align: left;
+    color: #000000;
+}
+
+/* Style du titre */
+h1 {
+    font-size: 36px;
+    color: #000000;
+    text-align: left;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #000000;
+    text-align: left;
+}
