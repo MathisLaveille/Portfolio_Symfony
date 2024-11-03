@@ -1,13 +1,51 @@
 {# templates/certification/index.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}Certifications | Mon Portfolio{% endblock %}
+{% block title %}Certifications | Mon Portfolio
+{% endblock %}
 
 {% block body %}
 
     <div class="container">
-        <h1>Bienvenue sur mes certifications !</h1>
-        <p>Voici la page de mes certifications de mon portfolio Symfony.</p>
+        <h1>Mes certifications !</h1>
+
+        <div class="row mt-4">
+            <!-- Carte avec PDF intégré pour Cisco -->
+            <div class="col-md-6 mb-5">
+                <div class="card shadow-lg zoom-effect uniform-card">
+                    <div class="card-header bg-dark text-white">
+                        <h3 class="card-title">Certification CISCO matériel informatique</h3>
+                    </div>
+                    <!-- Conteneur de PDF pour assurer la taille complète -->
+                    <div class="pdf-container">
+                        <embed src="{{ asset('fichier/materiel_info.pdf') }}" type="application/pdf" class="card-embed" alt="materiel_info">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Cette certification m'a donné des connaissances sur le matériel informatique, 
+                            en particulier sur la création et le montage d'un PC, ce qui m'a permis de 
+                            monter mon propre ordinateur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carte avec image pour la certification PIX -->
+            <div class="col-md-6 mb-5">
+                <div class="card shadow-lg zoom-effect uniform-card">
+                    <div class="card-header bg-dark text-white">
+                        <h3 class="card-title">Certification PIX</h3>
+                    </div>
+                    <img src="{{ asset('fichier/pix_certif.png') }}" class="card-img-top" alt="Pix">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Cette certification montre mes connaisance basique sur des domaines générale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    
+
 {% endblock %}
