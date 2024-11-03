@@ -1,13 +1,299 @@
 {# templates/competence/index.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}Competences | Mon Portfolio{% endblock %}
+{% block title %}Compétences | Mon Portfolio
+{% endblock %}
 
 {% block body %}
+	<div class="container">
+		<h1>Mes Compétences</h1>
+		<br><hr>
+		<h2>Développement</h2>
 
-    <div class="container">
-        <h1>Bienvenue sur mes competences !</h1>
-        <p>Voici la page de mes competences de mon portfolio Symfony.</p>
-    </div>
-    
+		<div class="row skills-parent">
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/html.png') }}" alt="HTML">
+						<div class="tooltip">Structuration des pages web avec HTML.</div>
+					</div>
+					<div class="skills-name">
+						<p>HTML</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/css.png') }}" alt="CSS">
+						<div class="tooltip">Stylisation avancée des pages avec CSS.</div>
+					</div>
+					<div class="skills-name">
+						<p>CSS</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/javascript.png') }}" alt="JavaScript">
+						<div class="tooltip">Interactivité et logique de page avec JavaScript.</div>
+					</div>
+					<div class="skills-name">
+						<p>JavaScript</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/csharp.png') }}" alt="C#">
+						<div class="tooltip">Développement avec C#.</div>
+					</div>
+					<div class="skills-name">
+						<p>C#</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/php.png') }}" alt="PHP">
+						<div class="tooltip">Programmation backend et frontend et gestion de base de données avec PHP.</div>
+					</div>
+					<div class="skills-name">
+						<p>PHP</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="500">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/symfony.png') }}" alt="symfony">
+						<div class="tooltip">Programmation en PHP avec Symfony.</div>
+					</div>
+					<div class="skills-name">
+						<p>Symfony</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/sql.png') }}" alt="sql">
+						<div class="tooltip">Connaissance des commandes SQL.</div>
+					</div>
+					<div class="skills-name">
+						<p>SQL</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="700">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/mariadb.png') }}" alt="mariadb">
+						<div class="tooltip">Gestion de bases de données avec MariaDB.</div>
+					</div>
+					<div class="skills-name">
+						<p>MariaDB</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="800">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/mysql.png') }}" alt="mysql">
+						<div class="tooltip">Gestion de bases de données avec MySQL.</div>
+					</div>
+					<div class="skills-name">
+						<p>MySQL</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="900">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/postgresql.png') }}" alt="postgresql">
+						<div class="tooltip">Gestion de bases de données avec PostgreSQL.</div>
+					</div>
+					<div class="skills-name">
+						<p>PostgreSQL</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="1000">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/python.png') }}" alt="python">
+						<div class="tooltip">Programmation avec Python.</div>
+					</div>
+					<div class="skills-name">
+						<p>Python</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr>
+		<h2>Réseau</h2>
+
+		<div class="row skills-parent">
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/bash.png') }}" alt="bash">
+						<div class="tooltip">Utilisation de Bash pour l'automatisation des tâches sur systèmes Unix et autres.</div>
+					</div>
+					<div class="skills-name">
+						<p>Bash</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/docker.png') }}" alt="docker">
+						<div class="tooltip">Containerisation d'applications avec Docker pour une gestion efficace.</div>
+					</div>
+					<div class="skills-name">
+						<p>Docker</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/linux.png') }}" alt="linux">
+						<div class="tooltip">Administration de systèmes Linux pour une gestion optimale des ressources.</div>
+					</div>
+					<div class="skills-name">
+						<p>Linux</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/proxmox.png') }}" alt="proxmox">
+						<div class="tooltip">Gestion de machines virtuelles et de conteneurs avec Proxmox.</div>
+					</div>
+					<div class="skills-name">
+						<p>Proxmox</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="500">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/putty.png') }}" alt="putty">
+						<div class="tooltip">Utilisation de PuTTY pour la gestion des connexions SSH.</div>
+					</div>
+					<div class="skills-name">
+						<p>Putty</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/virtualbox.png') }}" alt="virtualbox">
+						<div class="tooltip">Création et gestion de machines virtuelles avec VirtualBox.</div>
+					</div>
+					<div class="skills-name">
+						<p>VirtualBox</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="700">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/wireshark.png') }}" alt="wireshark">
+						<div class="tooltip">Analyse du trafic réseau et détection d'anomalies avec Wireshark.</div>
+					</div>
+					<div class="skills-name">
+						<p>Wireshark</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr>
+		<h2>Mes logiciels</h2>
+
+		<div class="row skills-parent">
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/blender.png') }}" alt="blender">
+						<div class="tooltip">Création de modèles 3D basiques avec Blender.</div>
+					</div>
+					<div class="skills-name">
+						<p>Blender</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/vscode.png') }}" alt="vscode">
+						<div class="tooltip">Développement logiciel et d'applications avec Visual Studio Code.</div>
+					</div>
+					<div class="skills-name">
+						<p>Visual Studio Code</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/github.png') }}" alt="github">
+						<div class="tooltip">Utilisation de GitHub pour la gestion de mes projets.</div>
+					</div>
+					<div class="skills-name">
+						<p>GitHub</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6 col-sm-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+				<div class="skills-card">
+					<div class="skills-img">
+						<img src="{{ asset('images/trello.png') }}" alt="trello">
+						<div class="tooltip">Gestion de projets et de tâches avec une approche visuelle grâce à Trello.</div>
+					</div>
+					<div class="skills-name">
+						<p>Trello</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<br><br><br><br>
+	</div>
 {% endblock %}

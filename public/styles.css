@@ -84,3 +84,105 @@ p {
     color: #000000;
     text-align: left;
 }
+
+/* Styles pour la section des compétences */
+.skills-parent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.skills-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 30px;
+    width: 140px;
+    height: 160px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    margin-bottom: 75px; /* Espace en bas de chaque carte */
+}
+
+.skills-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image des compétences */
+.skills-img img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+/* Style pour le nom des compétences */
+.skills-name p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+/* Styles pour l'infobulle */
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 12px;
+    width: 180px;
+    position: absolute;
+    top: 130%; /* Positionne l'infobulle en dessous */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 30
+}
+
+/* Triangle au-dessus de l'infobulle */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+}
+
+
+/* Afficher l'infobulle au survol */
+.skills-card:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Style pour les lignes de séparation */
+hr {
+    border: none; /* Supprime la bordure par défaut */
+    height: 10px; /* Épaisseur de la ligne */
+    background: linear-gradient(to right, #4A4A78, #333353, #4A4A78); /* Dégradé de couleurs */
+    border-radius: 10px; /* Arrondit légèrement les coins */
+    margin: 20px 0; /* Ajoute de l'espace autour de la ligne */
+    opacity: 0.8; /* Légèrement transparent pour un effet subtil */
+    width: 90%; /* Largeur réduite pour un look plus moderne */
+    transition: transform 0.2s ease; /* Transition pour l'effet de survol */
+    position: relative;
+    left: 10%;
+}
+
+/* Effet de survol */
+hr:hover {
+    transform: scaleX(1.2); /* Agrandit légèrement la ligne sur le survol */
+    opacity: 1; /* Rend la ligne plus opaque au survol */
+}
