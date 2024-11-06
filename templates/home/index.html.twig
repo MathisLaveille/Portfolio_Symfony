@@ -1,27 +1,27 @@
 {# templates/home/index.html.twig #}
-{% extends 'base.html.twig' %}
+{% extends 'base-home.html.twig' %}
 
 {% block title %}Accueil | Mon Portfolio{% endblock %}
 
 {% block body %}
-
-    <div class="container">
-        <h1>Bienvenue sur mon portfolio !</h1>
-        
-    
-        <h1>PROFIL</h1>
-    
-        <p>
-            – A PROPOS DE MOI
-            <br> <br>
-            Je m’appelle Laveille Mathis, j’ai 19 ans. Je suis actuellement en BTS SIO prépa à l’école Notre Dame de la Providance a Avranches avec l'option SLAM (Solutions Logicielles et Applications Métier)
-            <br>
-            Dès mon plus jeune âge j’ai commencé à me passionner pour l’informatique.
-            <br>
-            J'ai donc fait un bac général avec la spésialité NSI en terminale (Numérique et science de l'informatique) au lycée Notre Dame De La Providance à Avranches.
-            <br>
-            Au cours de ces années de Lycée, je me suis passionné pour l’informatique mais plus particulièrement pour le développement, ce qui explique mon choix pour l’option SLAM.
-        </p>
+    <!-- Bouton de menu pour afficher la navbar -->
+    <div class="menu-toggle">
+        <span class="menu-icon">&#9776;</span>
     </div>
 
+    <div class="title-center">
+        <h1>Bienvenue sur mon portfolio !</h1>
+    </div>
+
+    <!-- JavaScript pour afficher/masquer la navbar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navbar = document.querySelector(".navbar-vertical-home");
+
+            menuToggle.addEventListener("click", function () {
+                navbar.classList.toggle("navbar-vertical-visible");
+            });
+        });
+    </script>
 {% endblock %}

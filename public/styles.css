@@ -12,12 +12,12 @@ body {
 }
 
 /* Navbar verticale */
-.navbar-vertical {
-    display: flex;
+.navbar-vertical-home {
+    display: none;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: rgba(53, 51, 83, 1);
+    background-color: rgb(34, 33, 53);
     height: 100vh;
     position: fixed;
     left: 0;
@@ -25,6 +25,59 @@ body {
     width: 250px;
     text-align: center;
     z-index: 1000;
+}
+
+/* Navbar verticale */
+.navbar-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(34, 33, 53);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar-vertical-visible {
+    display: flex;
+}
+
+/* Bouton menu (trois petits tirets) */
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    cursor: pointer;
+    background-color: #4A4A78;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Style de l'icône du menu */
+.menu-icon {
+    font-size: 24px;
+}
+
+.title-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-left: 0; /* Supprime la marge de gauche */
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
 }
 
 /* Styles des liens dans la navbar comme boutons */
@@ -37,6 +90,11 @@ body {
     margin: 15px 0;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.1s;
+}
+
+.navbar-vertical-home a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Effet de survol */
