@@ -4,6 +4,10 @@
 {% block title %}Accueil | Mon Portfolio{% endblock %}
 
 {% block body %}
+
+    <!-- Arrière-plan des particules -->
+    <div class="particle-background"></div>
+
     <!-- Bouton de menu pour afficher la navbar -->
     <div class="menu-toggle">
         <span class="menu-icon">&#9776;</span>
@@ -24,4 +28,8 @@
             });
         });
     </script>
+
+    <!-- Script d'animation des particules -->
+    <script src="{{ asset('js/particles.js') }}"></script>
+    
 {% endblock %}
