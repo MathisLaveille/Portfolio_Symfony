@@ -15,11 +15,11 @@
 		{% block navbar %}
 			<div class="navbar-vertical">
 
-				<br><br><br>
+				<br>
 				<h2>
 					<a href="{{ path('app_home') }}">Mathis Laveille</a>
 				</h2>
-				<br><br>
+				<hr><br><br>
 
 				<div class="navbar-vertical-link">
 
@@ -28,18 +28,19 @@
 					<!--a href="/login" class="btn btn-outline-primary" type="submit">Se connecter</a-->
 					<!--/div-->
 
-						<a href="{{ path('app_home') }}">Accueil</a>
-						<a href="{{ path('app_presentation') }}">Présentation</a>
-						<a href="{{ path('app_competence') }}">Compétences</a>
-						<a href="{{ path('app_experience') }}">Expériences</a>
-						<a href="{{ path('app_certification') }}">Certifications</a>
-						<a href="{{ path('app_veille_numerique') }}">Veille numérique</a>
-						<br><br><br><br>
-						<a href="{{ path('app_mention_legale') }}">Mentions légales</a>
-						<br><br>
-
-					</div>
+					<a href="{{ path('app_home') }}">Accueil</a>
+					<a href="{{ path('app_presentation') }}">Présentation</a>
+					<a href="{{ path('app_competence') }}">Compétences</a>
+					<a href="{{ path('app_experience') }}">Expériences</a>
+					<a href="{{ path('app_certification') }}">Certifications</a>
+					<a href="{{ path('app_veille_numerique') }}">Veille numérique</a>
+						
+					<div class="flex-spacer"></div>
+				
 				</div>
+
+					<a href="{{ path('app_mention_legale') }}" class="legal-link">Mentions légales</a>
+				
 			</div>
 		{% endblock %}
 

@@ -80,6 +80,12 @@ body {
     text-align: center;
 }
 
+.navbar-vertical-link {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Remplit l'espace disponible */
+}
+
 /* Styles des liens dans la navbar comme boutons */
 .navbar-vertical-link a {
     display: block;
@@ -112,6 +118,10 @@ body {
 
 .navbar-vertical h2 a:hover {
     color: #cacaca; /* Couleur au survol (or par exemple) */
+}
+
+.flex-spacer {
+    flex-grow: 1; /* Pousse le lien Mentions légales vers le bas */
 }
 
 /* Conteneur principal avec marge à gauche pour éviter le chevauchement */
@@ -236,13 +246,23 @@ hr {
     width: 90%; /* Largeur réduite pour un look plus moderne */
     transition: transform 0.2s ease; /* Transition pour l'effet de survol */
     position: relative;
-    left: 10%;
 }
 
 /* Effet de survol */
 hr:hover {
     transform: scaleX(1.2); /* Agrandit légèrement la ligne sur le survol */
     opacity: 1; /* Rend la ligne plus opaque au survol */
+}
+
+.legal-link {
+    font-size: 12px; /* Taille de police plus petite */
+    color: #b0b0b0; /* Couleur gris clair pour un effet distinct */
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.legal-link:hover {
+    color: #ffffff; /* Couleur au survol */
 }
 
 .uniform-card {

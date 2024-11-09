@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const dy = p1.y - p2.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 if (distance < 120) {
-                    context.strokeStyle = "rgba(255, 255, 255, 0.2)";  // Réduire la transparence
+                    context.strokeStyle = "rgba(255, 255, 255, 0)";  // Réduire la transparence
                     context.lineWidth = 1;
                     context.beginPath();
                     context.moveTo(p1.x, p1.y);
