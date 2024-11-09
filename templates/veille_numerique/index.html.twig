@@ -1,27 +1,64 @@
-{# templates/veille_numerique/index.html.twig #}
-{% extends 'base.html.twig' %}
-
-{% block title %}Veille numerique | Mon Portfolio{% endblock %}
-
-{% block body %}
-
-    <div class="container">
-        <h1>Bienvenue sur ma veille numerique !</h1>
-        <p>Voici la page de mes veille numerique de mon portfolio Symfony.</p>
-
-        {% if articles is not empty %}
-        <ul>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ controller_name }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .article-card {
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .article-card img {
+            width: 100%;
+            height: auto;
+        }
+        .article-card-body {
+            padding: 15px;
+        }
+        .article-card-body h5 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .article-card-body p {
+            font-size: 14px;
+            color: #555;
+        }
+        .article-card-body a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>{{ controller_name }}</h1>
+        <div class="row">
             {% for article in articles %}
-                <li>
-                    <a href="{{ article.link }}" target="_blank">{{ article.title }}</a><br>
-                    <small>{{ article.pubDate }}</small>
-                    <p>{{ article.description }}</p>
-                </li>
+                <div class="col-md-4">
+                    <div class="article-card">
+                        {% if article.image %}
+                            <img src="{{ article.image }}" alt="Image de l'article">
+                        {% endif %}
+                        <div class="article-card-body">
+                            <h5>{{ article.title }}</h5>
+                            <p>{{ article.description | slice(0, 150) }}...</p>
+                            <a href="{{ article.link }}" target="_blank">Lire l'article</a>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <p>Aucun article disponible.</p>
             {% endfor %}
-        </ul>
-        {% else %}
-            <p>Aucun article disponible pour le moment.</p>
-        {% endif %}
+        </div>
     </div>
-
-{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

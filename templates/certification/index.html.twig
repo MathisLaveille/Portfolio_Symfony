@@ -29,6 +29,8 @@
                     </div>
                 </div>
             </div>
+
+            <br> <br>
             
             <!-- Carte avec image pour la certification PIX -->
             <div class="col-md-6 mb-5">
@@ -36,7 +38,9 @@
                     <div class="card-header bg-dark text-white">
                         <h3 class="card-title">Certification PIX</h3>
                     </div>
-                    <img src="{{ asset('fichier/pix_certif.png') }}" class="card-img-top" alt="Pix">
+                    <div class="pdf-container">
+                        <embed src="{{ asset('fichier/PIX.pdf') }}" type="application/pdf" class="card-embed" alt="pix">
+                    </div>
                     <div class="card-body">
                         <p class="card-text">
                             Cette certification montre mes connaisance basique sur des domaines générale.

@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #ffffff;
-    color: #333;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298, #000000);
+    color: #fff;
     line-height: 1.6;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .container h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -132,14 +132,14 @@ header {
 /* Style du titre */
 h1 {
     font-size: 36px;
-    color: #000000;
+    color: #ffffff;
     text-align: left;
     margin-top: 20px;
 }
 
 p {
     font-size: 18px;
-    color: #000000;
+    color: #ffffff;
     text-align: left;
 }
 
@@ -309,5 +309,5 @@ hr:hover {
     height: 100%;
     overflow: hidden;
     z-index: -1; /* Permet de placer le fond derrière le contenu */
-    background: #ffffff; /* Optionnel, selon la couleur de fond souhaitée */
+    background: linear-gradient(to bottom, #1e3c72,#000000); /* Optionnel, selon la couleur de fond souhaitée */
 }

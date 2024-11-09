@@ -9,26 +9,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const particles = [];
     const mouse = { x: null, y: null };
 
-    // Initialisation des particules (les étoiles)
+    // Créer des particules
     function initParticles() {
-        for (let i = 0; i < 150; i++) {  // Augmenter le nombre de particules pour plus d'étoiles
+        for (let i = 0; i < 200; i++) {
+            let speedX = Math.random() * 1 - 0.5;
+            let speedY = Math.random() * 1 - 0.5;
+
             particles.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                size: Math.random() * 2 + 1,  // Taille des étoiles
-                speedX: Math.random() * 0.3 - 0.15,
-                speedY: Math.random() * 0.3 - 0.15,
-                baseSpeedX: Math.random() * 0.3 - 0.15,  // Vitesse initiale
-                baseSpeedY: Math.random() * 0.3 - 0.15,  // Vitesse initiale
-                friction: 0.98 // Facteur de friction pour ralentir la particule
+                size: Math.random() * 4 + 1,
+                speedX: speedX,
+                speedY: speedY,
+                initialSpeedX: speedX,  // Vitesse initiale
+                initialSpeedY: speedY,  // Vitesse initiale
+                repulsion: { x: 0, y: 0 }, // Effet de répulsion
+                damping: 0.05 // Amortissement de la vitesse
             });
         }
     }
 
-    // Dessin des particules (étoiles)
+    // Dessiner les particules avec plus de transparence
     function drawParticles() {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        context.fillStyle = "rgba(255, 0, 0, 0.8)";  // Couleur des étoiles (blanc ou légèrement bleu)
+        context.fillStyle = "rgba(255, 255, 255, 0.2)";  // Réduction de l'opacité
 
         particles.forEach((p) => {
             context.beginPath();
@@ -38,42 +42,91 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Mise à jour des particules (étoiles)
+    // Déplacer les particules et recréer celles qui touchent le bord
     function updateParticles() {
-        particles.forEach((p) => {
-            // Application de la friction pour ralentir la particule progressivement
-            p.speedX *= p.friction;
-            p.speedY *= p.friction;
+        particles.forEach((p, index) => {
+            // Appliquer la vitesse de repulsion (réaction à la souris)
+            p.x += p.speedX + p.repulsion.x;
+            p.y += p.speedY + p.repulsion.y;
 
-            p.x += p.speedX;
-            p.y += p.speedY;
+            // Réduction de la vitesse de repulsion pour que la particule revienne à la normale
+            p.repulsion.x *= (1 - p.damping);
+            p.repulsion.y *= (1 - p.damping);
 
-            if (p.x < 0 || p.x > canvas.width) p.speedX = -p.speedX;
-            if (p.y < 0 || p.y > canvas.height) p.speedY = -p.speedY;
+            // Si la particule touche un bord, on la recrée à un endroit aléatoire sur un bord
+            if (p.x < 0 || p.x > canvas.width || p.y < 0 || p.y > canvas.height) {
+                // Suppression de la particule
+                particles.splice(index, 1);
 
+                // Créer une nouvelle particule aléatoire
+                createParticle();
+            }
+
+            // Interaction avec la souris
             const dx = p.x - mouse.x;
             const dy = p.y - mouse.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
-            // Définition d'une portée d'effet plus douce
-            if (distance < 100) {
+            // Étendre l'aura de la souris (par exemple, 150 pixels au lieu de 100)
+            if (distance < 200) {  // Augmenter la distance de l'aura
                 const angle = Math.atan2(dy, dx);
-                const repulsionStrength = 1; // Force de répulsion ajustée
+                const force = 1 - distance / 10000;  // Augmenter la force de répulsion
 
-                // Calcul de la vitesse avec une force de répulsion réduite
-                p.speedX += Math.cos(angle) * repulsionStrength;
-                p.speedY += Math.sin(angle) * repulsionStrength;
-            }
-
-            // Si la particule est éloignée de la souris, elle retourne à sa vitesse de base
-            if (distance > 150) {
-                p.speedX += (p.baseSpeedX - p.speedX) * 0.01; // Revient lentement à la vitesse de base
-                p.speedY += (p.baseSpeedY - p.speedY) * 0.01; // Revient lentement à la vitesse de base
+                // Repousser la particule
+                p.repulsion.x += Math.cos(angle) * force;
+                p.repulsion.y += Math.sin(angle) * force;
             }
         });
     }
 
-    // Connexions entre particules pour créer des constellations
+    // Créer une nouvelle particule au hasard sur un bord
+    function createParticle() {
+        let side = Math.floor(Math.random() * 4); // Choisir aléatoirement un côté (haut, bas, gauche, droite)
+        let x, y, speedX, speedY;
+
+        // Créer une particule sur un bord aléatoire
+        switch (side) {
+            case 0: // Haut
+                x = Math.random() * canvas.width;
+                y = 0;
+                speedX = Math.random() * 1 - 0.5;
+                speedY = Math.random() * 1 + 0.5;
+                break;
+            case 1: // Bas
+                x = Math.random() * canvas.width;
+                y = canvas.height;
+                speedX = Math.random() * 1 - 0.5;
+                speedY = Math.random() * 1 - 0.5;
+                break;
+            case 2: // Gauche
+                x = 0;
+                y = Math.random() * canvas.height;
+                speedX = Math.random() * 1 + 0.5;
+                speedY = Math.random() * 1 - 0.5;
+                break;
+            case 3: // Droite
+                x = canvas.width;
+                y = Math.random() * canvas.height;
+                speedX = Math.random() * 1 - 0.5;
+                speedY = Math.random() * 1 - 0.5;
+                break;
+        }
+
+        // Ajouter la nouvelle particule
+        particles.push({
+            x: x,
+            y: y,
+            size: Math.random() * 4 + 1,
+            speedX: speedX,
+            speedY: speedY,
+            initialSpeedX: speedX,
+            initialSpeedY: speedY,
+            repulsion: { x: 0, y: 0 },
+            damping: 0.05
+        });
+    }
+
+    // Relier les particules proches
     function connectParticles() {
         particles.forEach((p1, i) => {
             particles.slice(i + 1).forEach((p2) => {
@@ -81,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const dy = p1.y - p2.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 if (distance < 120) {
-                    context.strokeStyle = "rgba(255, 0, 0, 0.5)";  // Lignes des constellations (blanc)
+                    context.strokeStyle = "rgba(255, 255, 255, 0.2)";  // Réduire la transparence
                     context.lineWidth = 1;
                     context.beginPath();
                     context.moveTo(p1.x, p1.y);
@@ -92,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Animation des particules
+    // Animation
     function animateParticles() {
         drawParticles();
         updateParticles();
@@ -100,11 +153,11 @@ document.addEventListener("DOMContentLoaded", function () {
         requestAnimationFrame(animateParticles);
     }
 
+    // Événements de redimensionnement et de mouvement de la souris
     window.addEventListener("resize", () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     });
-
     window.addEventListener("mousemove", (e) => {
         mouse.x = e.x;
         mouse.y = e.y;

@@ -20,13 +20,14 @@ class VeilleNumeriqueController extends AbstractController
             $articles = [];
 
             if ($rssContent !== false) {
-                // Parcourir les éléments du flux (souvent <item> pour RSS)
+                // Parcourir les éléments du flux
                 foreach ($rssContent->channel->item as $item) {
                     $articles[] = [
                         'title' => (string) $item->title,
                         'link' => (string) $item->link,
                         'description' => (string) $item->description,
                         'pubDate' => (string) $item->pubDate,
+                        'image' => (string) $item->enclosure['url'], // Ajout de l'image
                     ];
                 }
             }
