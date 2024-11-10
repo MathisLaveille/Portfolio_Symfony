@@ -1,43 +1,20 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ controller_name }}</title>
+{# templates/certification/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Certifications | Mon Portfolio
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .article-card {
-            border: 1px solid #ddd;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        .article-card img {
-            width: 100%;
-            height: auto;
-        }
-        .article-card-body {
-            padding: 15px;
-        }
-        .article-card-body h5 {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .article-card-body p {
-            font-size: 14px;
-            color: #555;
-        }
-        .article-card-body a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
+{% endblock %}
+
+
+{% block body %}
     <div class="container mt-5">
-        <h1>{{ controller_name }}</h1>
+        <h1>Mes veille numérique !</h1> <br>
+        <p> Pour ma veille numérique j'ai chosis de la faire sur le cybersécurité car, si j'atteint l'école d'ingénieur, je souhaite étudier la cybersécurité.</p> <br><br>
+
         <div class="row">
             {% for article in articles %}
                 <div class="col-md-4">
@@ -53,12 +30,16 @@
                     </div>
                 </div>
             {% else %}
-                <p>Aucun article disponible.</p>
+                <p>Aucun article disponible pour le moment, les nouveaux vont bientôt arriver !</p>
             {% endfor %}
         </div>
     </div>
+    
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% endblock %}

@@ -331,3 +331,42 @@ hr:hover {
     z-index: -1; /* Permet de placer le fond derrière le contenu */
     background: linear-gradient(to bottom, #1e3c72,#000000); /* Optionnel, selon la couleur de fond souhaitée */
 }
+
+.article-card {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #ddd;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour un effet fluide */
+}
+
+.article-card:hover {
+    transform: translateY(-5px); /* Déplace légèrement la carte vers le haut */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée au survol */
+}
+
+.article-card img {
+    width: 100%;
+    height: auto;
+}
+
+.article-card-body {
+    padding: 15px;
+}
+
+.article-card-body h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.article-card-body p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.article-card-body a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+}
