@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: rgb(34, 33, 53);
+    background-color: #1e3b50;
     height: 100vh;
     position: fixed;
     left: 0;
@@ -33,7 +33,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: rgb(34, 33, 53);
+    background-color: #1e3b50;
     height: 100vh;
     position: fixed;
     left: 0;
@@ -54,11 +54,17 @@ body {
     left: 15px;
     z-index: 1001;
     cursor: pointer;
-    background-color: #4A4A78;
+    background-color: #1c5e6b;
     padding: 10px;
     border-radius: 5px;
     color: white;
 }
+
+.menu-toggle:hover {
+    background-color: #113c44;
+    transform: scale(1.05);
+}
+
 
 /* Style de l'icône du menu */
 .menu-icon {
@@ -91,7 +97,7 @@ body {
     display: block;
     color: white;
     text-decoration: none;
-    background-color: #4A4A78;
+    background-color: #338494;
     padding: 10px 20px;
     margin: 15px 0;
     border-radius: 5px;
@@ -105,7 +111,7 @@ body {
 
 /* Effet de survol */
 .navbar-vertical-link a:hover {
-    background-color: #333353;
+    background-color: #216070;
     transform: scale(1.05);
 }
 
@@ -239,7 +245,7 @@ p {
 hr {
     border: none; /* Supprime la bordure par défaut */
     height: 10px; /* Épaisseur de la ligne */
-    background: linear-gradient(to right, #4A4A78, #333353, #4A4A78); /* Dégradé de couleurs */
+    background-color: #2aadc4;
     border-radius: 10px; /* Arrondit légèrement les coins */
     margin: 20px 0; /* Ajoute de l'espace autour de la ligne */
     opacity: 0.8; /* Légèrement transparent pour un effet subtil */
@@ -303,7 +309,7 @@ hr:hover {
 /* Texte de la carte */
 .card-text {
     color: #ffffff; /* Couleur du texte */
-    background-color: #4A4A78; /* Couleur de fond */
+    background-color: #1c5e6b; /* Couleur de fond */
     padding: 10px; /* Espace autour du texte */
     border-radius: 5px; /* Coins arrondis */
     margin-top: 10px; /* Espace au-dessus */
@@ -329,7 +335,7 @@ hr:hover {
     height: 100%;
     overflow: hidden;
     z-index: -1; /* Permet de placer le fond derrière le contenu */
-    background: linear-gradient(to bottom, #1e3c72,#000000); /* Optionnel, selon la couleur de fond souhaitée */
+    background: linear-gradient(to bottom, #4a92a8, #276d8b, #17435a); /* Dégradé inspiré de l'eau */
 }
 
 .article-card {

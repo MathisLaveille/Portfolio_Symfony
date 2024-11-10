@@ -12,6 +12,9 @@
 
 {% block body %}
     <div class="container mt-5">
+
+        <div class="particle-background"></div>
+
         <h1>Mes veille numérique !</h1> <br>
         <p> Pour ma veille numérique j'ai chosis de la faire sur le cybersécurité car, si j'atteint l'école d'ingénieur, je souhaite étudier la cybersécurité.</p> <br><br>
 
@@ -33,6 +36,9 @@
                 <p>Aucun article disponible pour le moment, les nouveaux vont bientôt arriver !</p>
             {% endfor %}
         </div>
+
+        <script src="{{ asset('js/particles.js') }}"></script>
+        
     </div>
     
 {% endblock %}

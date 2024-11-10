@@ -28,18 +28,19 @@
 					<!--a href="/login" class="btn btn-outline-primary" type="submit">Se connecter</a-->
 					<!--/div-->
 
-						<a href="{{ path('app_home') }}">Accueil</a>
-						<a href="{{ path('app_presentation') }}">Présentation</a>
-						<a href="{{ path('app_competence') }}">Compétences</a>
-						<a href="{{ path('app_experience') }}">Expériences</a>
-						<a href="{{ path('app_certification') }}">Certifications</a>
-						<a href="{{ path('app_veille_numerique') }}">Veille numérique</a>
-						
-						<div class="flex-spacer"></div>
+					<a href="{{ path('app_home') }}">Accueil</a>
+					<a href="{{ path('app_presentation') }}">Présentation</a>
+					<a href="{{ path('app_competence') }}">Compétences</a>
+					<a href="{{ path('app_experience') }}">Expériences</a>
+					<a href="{{ path('app_certification') }}">Certifications</a>
+					<a href="{{ path('app_veille_numerique') }}">Veille numérique</a>
+					
+					<div class="flex-spacer"></div>
 
-						<a href="{{ path('app_mention_legale') }}">Mentions légales</a>
-					</div>
 				</div>
+
+					<a href="{{ path('app_mention_legale') }}" class="legal-link">Mentions légales</a>
+					
 			</div>
 		{% endblock %}
 
