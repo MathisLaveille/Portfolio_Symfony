@@ -3,14 +3,66 @@
 
 {% block title %}Expériences | Mon Portfolio{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% endblock %}
+
 {% block body %}
 
     <div class="container">
 
         <div class="particle-background"></div>
 
-        <h1>Bienvenue sur mes expériences !</h1>
-        <p>Voici la page de mes expériences : </p>
+        <h1>Mes expériences !</h1>
+
+        <br><br>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="article-card">
+                    <embed src="{{ asset('fichier/sturno.png') }}" type="application/pdf" class="card-embed" style="width: 100%; height: 500px;" alt="materiel_info">
+                    <div class="article-card-body">
+                        <h5>Stage 6 semaines STURNO</h5>
+                        <p>J'ai réalisé un stage dans l'entreprise STURNO à Avranches pendant 6 semaines, où j'ai appris à faire du développement web avec Python et le framework Django. Ce fut un stage très intéressant et instructif, durant lequel on m'a confié une mission consistant à développer un logiciel permettant de répertorier toute l'infrastructure informatique des entreprises ainsi que leurs logiciels, avec un système de liens entre chaque équipement réseau.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="article-card">
+                    <embed src="{{ asset('fichier/bih.jpg') }}" type="application/pdf" class="card-embed" style="width: 100%; height: 500px;" alt="pix">
+                    <div class="article-card-body">
+                        <h5>Job d'été BIH</h5>
+                        <p>Depuis plus de 2 ans, et pendant toutes les vacances scolaires, je travaille dans une entreprise, la BIH à Pontorson, spécialisée dans la blanchisserie inter-hospitalière.</p>
+                    </div>
+                </div>
+                <br><br><br><br>
+            </div>
+
+            <div class="col-md-6">
+                <div class="article-card">
+                    <embed src="{{ asset('fichier/image.png') }}" type="application/pdf" class="card-embed" style="width: 100%; height: 500px;" alt="materiel_info">
+                    <div class="article-card-body">
+                        <h5>Stage dessinateur-projeteur</h5>
+                        <p>J'ai réalisé un stage de dessinateur-projeteur en 3e, un métier qui consiste à créer des schémas et maquettes sur papier ou en modélisation 3D sur ordinateur. Ce stage m'avait permis de découvrir mon intérêt pour le domaine de l'informatique.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="article-card">
+                    <embed src="{{ asset('fichier/image.jpg') }}" type="application/pdf" class="card-embed" style="width: 100%; height: 500px;" alt="pix">
+                    <div class="article-card-body">
+                        <h5>Autre stages ...</h5>
+                        <p>J'ai également réalisé d'autres stages, comme un stage de vétérinaire d'une semaine en première pendant les vacances et un stage de menuiserie d'une semaine, également pendant les vacances. Ces deux stages m'ont permis de découvrir différents métiers, de comprendre leur fonctionnement, et de confirmer que je me dirigeais dans la bonne voie en choisissant le domaine de l'informatique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br>
+
     
         <script src="{{ asset('js/particles.js') }}"></script>
 
