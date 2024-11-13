@@ -1,60 +1,41 @@
-{# templates/certification/index.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}Certifications | Mon Portfolio
-{% endblock %}
+{% block title %}Certifications | Mon Portfolio{% endblock %}
 
 {% block body %}
-
     <div class="container">
-
         <div class="particle-background"></div>
 
         <h1>Mes certifications !</h1>
 
-        <div class="row mt-4">
-            <!-- Carte avec PDF intégré pour Cisco -->
-            <div class="col-md-6 mb-5">
-                <div class="card shadow-lg zoom-effect uniform-card">
-                    <div class="card-header bg-dark text-white">
-                        <h3 class="card-title">Certification CISCO matériel informatique</h3>
-                    </div>
-                    <!-- Conteneur de PDF pour assurer la taille complète -->
-                    <div class="pdf-container">
-                        <embed src="{{ asset('fichier/materiel_info.pdf') }}" type="application/pdf" class="card-embed" alt="materiel_info">
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">
-                            Cette certification m'a donné des connaissances sur le matériel informatique, 
-                            en particulier sur la création et le montage d'un PC, ce qui m'a permis de 
-                            monter mon propre ordinateur.
-                        </p>
+        <br><br>
+
+        <div class="row">
+            <!-- Première carte: Certification CISCO matériel informatique -->
+            <div class="col-md-6">
+                <div class="article-card">
+                    <embed src="{{ asset('fichier/materiel_info.pdf') }}" type="application/pdf" class="card-embed" style="width: 100%; height: 500px;" alt="materiel_info">
+                    <div class="article-card-body">
+                        <h5>Certification CISCO matériel informatique</h5>
+                        <p>Cette certification m'a donné des connaissances sur le matériel informatique, en particulier sur la création et le montage d'un PC, ce qui m'a permis de monter mon propre ordinateur.</p>
+                        <a href="{{ asset('fichier/materiel_info.pdf') }}" class="btn btn-primary" download>Télécharger le PDF</a>
                     </div>
                 </div>
             </div>
 
-            <br> <br>
-            
-            <!-- Carte avec image pour la certification PIX -->
-            <div class="col-md-6 mb-5">
-                <div class="card shadow-lg zoom-effect uniform-card">
-                    <div class="card-header bg-dark text-white">
-                        <h3 class="card-title">Certification PIX</h3>
-                    </div>
-                    <div class="pdf-container">
-                        <embed src="{{ asset('fichier/PIX.pdf') }}" type="application/pdf" class="card-embed" alt="pix">
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">
-                            Cette certification montre mes connaisance basique sur des domaines générale.
-                        </p>
+            <!-- Deuxième carte: Certification PIX -->
+            <div class="col-md-6">
+                <div class="article-card">
+                    <embed src="{{ asset('fichier/PIX.pdf') }}" type="application/pdf" class="card-embed" style="width: 100%; height: 500px;" alt="pix">
+                    <div class="article-card-body">
+                        <h5>Certification PIX</h5>
+                        <p>Cette certification montre mes connaissances de base sur des domaines généraux.</p>
+                        <a href="{{ asset('fichier/PIX.pdf') }}" class="btn btn-primary" download>Télécharger le PDF</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <script src="{{ asset('js/particles.js') }}"></script>
-
     </div>
-
 {% endblock %}
