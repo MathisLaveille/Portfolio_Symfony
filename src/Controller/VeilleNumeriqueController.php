@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class VeilleNumeriqueController extends AbstractController
 {
-    #[Route('/veille/numerique', name: 'app_veille_numerique')]
+    #[Route('/veille-numerique', name: 'app_veille_numerique')]
     public function index(): Response
     {
         // URL du flux RSS
