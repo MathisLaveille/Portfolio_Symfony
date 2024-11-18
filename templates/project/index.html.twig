@@ -1,0 +1,53 @@
+{# templates/experience/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Expériences | Mon Portfolio{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="particle-background"></div>
+        <br>
+        <h1>Mes projects !</h1>
+        <br><br>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="article-card">
+                    <div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                        <div class="carousel-inner">
+                            {% for i in 1..10 %}
+                                <div class="carousel-item {% if i == 1 %}active{% endif %}">
+                                    <img src="{{ asset('fichier/lueur_du_mond_' ~ i ~ '.png') }}" class="d-block w-100" alt="Image {{ i }}">
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="article-card-body">
+                        <h5>Site vitrine pour mini-entreprise</h5>
+                        <p>
+                            Ce projet consistait à concevoir et développer un site vitrine pour une mini-entreprise afin de mettre en valeur ses services et produits. 
+                            Le site inclut une présentation de l'entreprise, une galerie d'images, et des informations de contact. 
+                            Le design a été pensé pour être moderne et responsive, offrant une expérience utilisateur optimale sur tous les appareils.<br><br>
+                            Lien du site en ligne : https://me.ndlpavranches.fr/lueur-du-mont/<br>
+                            Lien du site en production : https://spitskyyy.github.io/Lueur-du-Mont/<br>
+                            Lien du github : https://github.com/Spitskyyy/Lueur-du-Mont
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="{{ asset('js/particles.js') }}"></script>
+    </div>
+{% endblock %}
