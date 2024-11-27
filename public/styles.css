@@ -80,7 +80,7 @@ body {
     margin-left: 0; /* Supprime la marge de gauche */
 }
 
-.container h1 {
+.container-ml h1 {
     font-size: 2.5rem;
     color: #ffffff;
     text-align: center;
@@ -131,7 +131,7 @@ body {
 }
 
 /* Conteneur principal avec marge à gauche pour éviter le chevauchement */
-.container {
+.container-ml {
     width: 80%;
     margin: 0 auto;
     margin-left: 260px;
