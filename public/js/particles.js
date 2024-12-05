@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             // Étendre l'aura de la souris (par exemple, 150 pixels au lieu de 100)
-            if (distance < 200) {  // Augmenter la distance de l'aura
+            if (distance < 150) {  // Augmenter la distance de l'aura
                 const angle = Math.atan2(dy, dx);
-                const force = 1 - distance / 10000;  // Augmenter la force de répulsion
+                const force = 1 - distance / 1000;  // Augmenter la force de répulsion
 
                 // Repousser la particule
                 p.repulsion.x += Math.cos(angle) * force;
