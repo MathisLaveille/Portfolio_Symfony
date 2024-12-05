@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact | Mon Portfolio{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Styles spécifiques à la page Contact */
+        .container-ml {
+            width: 80%;
+            margin: 0 auto;
+            margin-left: 260px;
+            padding: 0 15px;
+        }
+
+        .contact-links {
+            text-align: center;
+        }
+
+        .contact-links h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        /* Liens de contact */
+        .contact-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-links ul li {
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 10px;
+            background: linear-gradient(to right, #1c325e, #33458f);
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        /* Effet de survol des liens */
+        .contact-links a:hover {
+            background-color: #216070;
+            transform: scale(1.05);
+        }
+
+        /* Carte Google */
+        iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 450px;
+            border: none;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="container-ml">
+    <div class="particle-background"></div>
+    <h1>Contactez-moi</h1>
+    <p>N'hésitez pas à me contacter directement via mes réseaux sociaux professionnels.</p>
+
+    <hr>
+
+    <div class="contact-links">
+        <h2>Me suivre :</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/mathis-laveille" target="_blank">LinkedIn : https://www.linkedin.com/in/mathis-laveille</a></li>
+            <li><a href="mailto:mathislaveille@gmail.com">Email : mathislaveille@gmail.com</a></li>
+            <li><a href="https://github.com/MathisLaveille" target="_blank">GitHub : https://github.com/MathisLaveille</a></li>
+            <li><strong>Téléphone :</strong> +33 7 87 19 48 76</li>
+
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>Localisation</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50934.57799557305!2d-1.3854041195383844!3d48.67590302400655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480955150dfa9001%3A0x40c14484fb98470!2s50300%20Avranches!5e1!3m2!1sfr!2sfr!4v1733439687786!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <hr>
+
+</div>
+{% endblock %}
