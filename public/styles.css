@@ -384,3 +384,74 @@ hr:hover {
     color: #ddd;
     font-weight: bold;
 }
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond plus sombre pour mieux voir le contenu */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Table principale */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #2a5298; /* Couleur de fond plus claire pour la table */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* En-tête de la table */
+.table th {
+    background-color: #1b254d; /* Couleur foncée pour l'en-tête */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Cellules de la table */
+.table td {
+    background-color: #2c3a65; /* Arrière-plan des cellules */
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Séparation des lignes */
+.table tr:nth-child(even) {
+    background-color: #1c325e; /* Lignes paires légèrement plus foncées */
+}
+
+/* Bordures des cellules */
+.table td, .table th {
+    border: 1px solid #1b254d; /* Bordures sombres */
+}
+
+/* Effet au survol */
+.table tr:hover {
+    background-color: #33458f; /* Fond légèrement plus clair au survol */
+}
+
+/* Caption de la table */
+.table caption {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Listes dans les cellules */
+.table ul {
+    padding-left: 20px;
+}
+
+.table ul li {
+    font-size: 1rem;
+    color: #f0f0f0;
+}

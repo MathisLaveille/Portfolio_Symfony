@@ -1,4 +1,3 @@
-{# templates/presentation/index.html.twig #}
 {% extends 'base.html.twig' %}
 
 {% block title %}Présentation | Mon Portfolio{% endblock %}
@@ -13,7 +12,7 @@
 
         <br> <br> <br> <br>
 
-        <h1>PROFIL</h1>
+        <h2>PROFIL</h2>
     
         <p>
             – À PROPOS DE MOI
@@ -32,65 +31,76 @@
 
         <br> <br> <hr> <br> <br> 
 
-
         <h2>Le BTS SIO à Notre-Dame de la Providence à Avranches</h2>
         <p>
             Le BTS SIO (Services Informatiques aux Organisations) est une formation de niveau bac+2 en France. Elle forme des techniciens supérieurs capables de gérer et de maintenir les services informatiques des entreprises et autres organisations.
-        <p>
+        </p>
+
         <br> <br> <br> <br>
 
-        <table>
-    
-        <caption> <h3> Au sein de ce BTS, trois parcours sont proposés : deux spécialités principales et une option supplémentaire. </h3> <br><br><br> </caption>
-            <tbody><tr> 
-                <th> Spécialité SLAM (Solutions Logicielles et Applications Métier)</th> 
-                <th> Spécialité SISR (Solutions d’Infrastructure, Systèmes et Réseaux) </th> 
-                <th> Option Prépa ISEN (Préparation à une école d’ingénieurs) </th> 
-            </tr>
+            <table class="table">
+                <caption><h3>Les trois parcours proposés au sein du BTS SIO : deux spécialités principales et une option préparatoire à une école d'ingénieurs</h3></caption>
+                <thead>
+                    <tr> 
+                        <th>Spécialité SLAM (Solutions Logicielles et Applications Métier)</th> 
+                        <th>Spécialité SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</th> 
+                        <th>Option Prépa ISEN (Préparation à une école d'ingénieurs)</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> 
+                        <td>
+                            La spécialité SLAM est idéale pour les étudiants qui souhaitent se diriger vers les métiers du développement logiciel et de la gestion d'applications métier. Elle forme des professionnels capables de concevoir, développer et maintenir des applications informatiques adaptées aux besoins spécifiques des entreprises. Les étudiants apprennent à gérer l'ensemble du cycle de vie d'une application, de la conception à la mise en production.<br><br>
+                            <strong>Quelques métiers accessibles après la spécialité SLAM :</strong>
+                            <ul>
+                                <li>Développeur d'applications informatiques</li>
+                                <li>Chargé d'études informatiques</li>
+                                <li>Responsable des services applicatifs</li>
+                                <li>Analyste programmeur</li>
+                                <li>Développeur full-stack</li>
+                                <li>Technicien d'études informatiques</li>
+                            </ul>
+                        </td> 
 
-            <tr> 
-                <td>L’option SLAM est destinée aux étudiants qui souhaitent s’orienter vers les métiers de la conception et de la maintenance d’applications logicielles. Cette spécialité forme des professionnels capables :<br>
-                        - De développer des logiciels et applications répondant aux besoins d’une entreprise.<br>
-                        - De gérer un parc informatique et administrer des réseaux.<br>
-                        - D’intégrer, sécuriser et configurer serveurs, postes clients, et équipements d’interconnexion.<br><br>
-                    L’option SLAM est principalement destinée aux étudiants qui s’orientent vers les métiers liés à la conception et la maintenance de programmes applicatifs. Donc grâce à des cours spécifiques, les diplômés seront capables de gérer un parc informatique ou d’administrer un réseau au sein d’une entreprise. Aussi ils pourront également gérer l’intégration, la sécurisation et la configuration des serveurs, mais aussi des postes clients et des équipements d’interconnexion. </td> 
+                        <td>
+                            La spécialité SISR est centrée sur la gestion des infrastructures informatiques, des réseaux et de la sécurité. Les étudiants y acquièrent des compétences pour concevoir, déployer et maintenir des systèmes informatiques sécurisés. Ils apprennent également à gérer les réseaux d'entreprise, à assurer la sécurité des données et à résoudre les problèmes techniques liés aux équipements et aux systèmes.<br><br>
+                            <strong>Quelques métiers accessibles après la spécialité SISR :</strong>
+                            <ul>
+                                <li>Technicien réseau — télécoms</li>
+                                <li>Administrateur systèmes et réseaux</li>
+                                <li>Support informatique et réseaux</li>
+                                <li>Technicien en infrastructure réseau</li>
+                                <li>Technicien de sécurité informatique</li>
+                                <li>Pilote d'exploitation</li>
+                                <li>Responsable de la gestion des incidents réseaux</li>
+                            </ul>
+                        </td> 
 
-                <td>L’acronyme SISR signifie « Solutions d’infrastructure, systèmes et réseaux ».
-                    L’option SISR est donc d’abord destinée aux étudiants qui s’orientent vers les métiers liés à la conception et la maintenance d’infrastructures réseaux. Avant tout cela correspond à assurer la sécurité, la maintenance et l’installation des réseaux et des équipements informatiques font partie des principales missions des futurs administrateurs, techniciens ou pilotes d’exploitation. </td> 
+                        <td>
+                            En complément des deux spécialités principales, le BTS SIO propose l'option Prépa ISEN (Préparation à une école d’ingénieur). Cette option permet aux étudiants d'approfondir leurs connaissances en mathématiques, physique, anglais et sciences humaines, tout en suivant un programme intensif conçu pour répondre aux exigences des écoles d'ingénieurs. Elle prépare les étudiants à intégrer des formations de haut niveau, notamment en ingénierie informatique...<br><br>
+                        <strong>Quelques métiers et parcours accessibles après la Prépa ISEN :</strong>
+                        <ul>
+                            <li>Ingénieur en informatique (Développement logiciel, systèmes embarqués, IA)</li>
+                            <li>Ingénieur en cybersécurité</li>
+                            <li>Ingénieur en télécommunications</li>
+                            <li>Chef de projet IT</li>
+                            <li>Ingénieur en systèmes embarqués</li>
+                            <li>Data Scientist (Scientifique des données)</li>
+                            <li>Ingénieur en génie logiciel</li>
+                            <li>Ingénieur réseau et infrastructures</li>
+                            <li>Ingénieur en Intelligence Artificielle (IA)</li>
+                            <li>Ingénieur en robotique</li>
+                            <li>Consultant en transformation digitale</li>
+                        </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-                <td>
-                    Le BTS, depuis cette année à ajouter une prépa pour une école d'ingégnieur? pour intégrer ce BTS prépa, les étudiants devront être acceptés à poursuivre chaque semaine six heures de plus qu’en BTS classique.  Ces six heures supplémentaires de maths, physique, anglais et sciences humaines devront permettre d’entrer plus doucement dans le cursus. 
-                </td>
-            </tr>
-
-            <tr> 
-                <td>Voici quelques exemples de métiers que les étudiants peuvent exercer après le BTS SIO option SLAM :
-
-                    Développeur d’applications informatiques
-                    Chargé d’études informatiques
-                    Responsable des services applicatifs
-                    Programmeur analyste
-                    Programmeur d’applications
-                    Technicien d’études informatiques</td> 
-
-                <td>Donc voici quelques exemples de métiers que les étudiants peuvent exercer après le BTS SIO option SISR :
-
-                    Technicien réseau — télécoms
-                    Technicien systèmes et réseaux
-                    Administrateur systèmes et réseaux
-                    Support systèmes et réseaux
-                    Technicien d’infrastructure
-                    Pilote d’exploitation
-                    Technicien de production</td> 
-            </tr>
-
-        </tbody></table>
 
         <br> <br> <hr> <br> <br> 
 
         <script src="{{ asset('js/particles.js') }}"></script>
     </div>
 
-    
-    
 {% endblock %}

@@ -1,83 +1,122 @@
 {# templates/experience/index.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}Expériences | Mon Portfolio{% endblock %}
+{% block title %}Expériences | Mon Portfolio
+{% endblock %}
 
 {% block stylesheets %}
-    {{ parent() }}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	{{ parent() }}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 {% endblock %}
 
 {% block body %}
-    <div class="container-ml">
-        <div class="particle-background"></div>
-        <br>
-        <h1>Mes projects !</h1>
+	<div class="container-ml">
+		<div class="particle-background"></div>
+		<br>
+		<h1>Mes projects !</h1>
         <br><br>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="article-card">
-                    <div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-                        <div class="carousel-inner">
-                            {% for i in 1..10 %}
-                                <div class="carousel-item {% if i == 1 %}active{% endif %}">
-                                    <img src="{{ asset('fichier/lueur_du_mond_' ~ i ~ '.png') }}" class="d-block w-100" alt="Image {{ i }}">
-                                </div>
-                            {% endfor %}
-                        </div>
-                    </div>
+        <p style="text-align: center; font-style: italic;">Placez le curseur de la souris sur les images pour arrêter le défilement et pouvoir lire.</p>
 
-                    <div class="article-card-body">
-                        <h1>Site vitrine pour mini-entreprise</h1>
-                        <p>
-                            Ce projet consistait à concevoir et développer un site vitrine pour une mini-entreprise afin de mettre en valeur ses services et produits. 
-                            Le site inclut une présentation de l'entreprise, une galerie d'images, et des informations de contact. 
-                            Le design a été pensé pour être moderne et responsive, offrant une expérience utilisateur optimale sur tous les appareils.<br><br>
-                            Lien du site en ligne : https://me.ndlpavranches.fr/lueur-du-mont/<br>
-                            Lien du site en production : https://spitskyyy.github.io/Lueur-du-Mont/<br>
-                            Lien du github : https://github.com/Spitskyyy/Lueur-du-Mont
-                        </p>
-                    </div>
-                </div>
-            </div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="article-card">
+					<div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+						<div class="carousel-inner">
+							{% for i in 1..10 %}
+								<div class="carousel-item {% if i == 1 %}active{% endif %}">
+									<img src="{{ asset('fichier/lueur_du_mond_' ~ i ~ '.png') }}" class="d-block w-100" alt="Image {{ i }}">
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+
+					<div class="article-card-body">
+						<h1>Site vitrine pour mini-entreprise</h1>
+						<p>
+							Ce projet consistait à concevoir et développer un site vitrine pour une mini-entreprise afin de mettre en valeur ses services et produits. 
+							                            Le site inclut une présentation de l'entreprise, une galerie d'images, et des informations de contact. 
+							                            Le design a été pensé pour être moderne et responsive, offrant une expérience utilisateur optimale sur tous les appareils.<br><br>
+							<i> Lien du site en ligne : <a href="https://me.ndlpavranches.fr/lueur-du-mont/">https://me.ndlpavranches.fr/lueur-du-mont/</a><br>
+							    Lien du site en production : <a href="https://spitskyyy.github.io/Lueur-du-Mont/">https://spitskyyy.github.io/Lueur-du-Mont/</a><br>
+							    Lien du github : <a href="https://github.com/Spitskyyy/Lueur-du-Mont">https://github.com/Spitskyyy/Lueur-du-Mont</a></i>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="article-card">
+					<div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+						<div class="carousel-inner">
+							{% for i in 1..3 %}
+								<div class="carousel-item {% if i == 1 %}active{% endif %}">
+									<img src="{{ asset('fichier/Atedi_' ~ i ~ '.png') }}" class="d-block w-100" alt="Image {{ i }}">
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+
+					<div class="article-card-body">
+						<h1>Amélioration et mise en place de Dolibarr et Atedi</h1>
+						<p>
+							Le but de ce projet était de créer et de configurer plusieurs machines virtuelles (VM) pour permettre une gestion efficace des logiciels Dolibarr et Atedi, ainsi que leurs bases de données respectives. Plus précisément, nous avons mis en place une VM dédiée à chaque logiciel : une pour
+							<strong>Atedi</strong>, une pour
+							<strong>Dolibarr</strong>, et une pour chaque base de données associée,
+							<strong>la base de données de Atedi</strong>
+							et
+							<strong>la base de données de Dolibarr</strong>.<br><br>
+
+							Afin d'assurer la haute disponibilité et la fiabilité des systèmes, deux autres VMs ont été créées pour effectuer la réplication des bases de données de
+							<strong>Dolibarr</strong>
+							et de
+							<strong>Atedi</strong>. Cette réplication garantit que les données sont synchronisées en temps réel et disponibles en cas de panne d'une machine.<br><br>
+
+							En parallèle, nous avons effectué des mises à jour sur
+							<strong>Atedi</strong>, en intégrant les nouvelles modifications demandées, afin d'améliorer la performance et les fonctionnalités du logiciel. Ce processus de mise à jour a été essentiel pour répondre aux besoins spécifiques de l'entreprise et assurer la compatibilité avec les autres systèmes.<br><br>
+
+							Ce projet a permis d'optimiser la gestion des données et de renforcer la stabilité des applications, tout en offrant une solution plus flexible et évolutive pour l'avenir.<br><br>
+
+                            <i> Lien du github Dolibarr : <a href="https://github.com/MathisLaveille/dolibarr_2024.git">https://github.com/MathisLaveille/dolibarr_2024.git</a><br>
+							    Lien du github Atedi : <a href="https://github.com/MathisLaveille/Atedi_2024.git">https://github.com/MathisLaveille/Atedi_2024.git</a><br></i>
+
+                            <br><br><br>
+
+                            <strong>Documents téléchargeables :</strong><br>
+                            <ul>
+                                <li>
+                                    <a href="{{ asset('fichier/Dolibarr_Atedi_documentation_utilisateur.pdf') }}" download>
+                                        Documentation utilisateur Dolibarr et Atedi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ asset('fichier/Dolibarr_Atedi_documentation_technique.pdf') }}" download>
+                                        Documentation technique Dolibarr et Atedi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ asset('fichier/cahier_des_charges.pdf') }}" download>
+                                        Cahier des charges
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ asset('fichier/planning_complet.pdf') }}" download>
+                                        Planning complet
+                                    </a>
+                                </li>
+                            </ul>
+						</p>
+					</div>
+				</div>
+			</div>
         </div>
 
-        <br><br><br><br>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="article-card">
-                    <div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-                        <div class="carousel-inner">
-                            {% for i in 1..10 %}
-                                <div class="carousel-item {% if i == 1 %}active{% endif %}">
-                                    <img src="{{ asset('fichier/lueur_du_mond_' ~ i ~ '.png') }}" class="d-block w-100" alt="Image {{ i }}">
-                                </div>
-                            {% endfor %}
-                        </div>
-                    </div>
+		<br><br><br><br><br><br><br><br>
 
-                    <div class="article-card-body">
-                        <h1>Site vitrine pour mini-entreprise</h1>
-                        <p>
-                            Ce projet consistait à concevoir et développer un site vitrine pour une mini-entreprise afin de mettre en valeur ses services et produits. 
-                            Le site inclut une présentation de l'entreprise, une galerie d'images, et des informations de contact. 
-                            Le design a été pensé pour être moderne et responsive, offrant une expérience utilisateur optimale sur tous les appareils.<br><br>
-                            Lien du site en ligne : https://me.ndlpavranches.fr/lueur-du-mont/<br>
-                            Lien du site en production : https://spitskyyy.github.io/Lueur-du-Mont/<br>
-                            Lien du github : https://github.com/Spitskyyy/Lueur-du-Mont
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <br><br><br><br><br><br><br><br>
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="{{ asset('js/particles.js') }}"></script>
-    </div>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="{{ asset('js/particles.js') }}"></script>
+	</div>
 {% endblock %}
