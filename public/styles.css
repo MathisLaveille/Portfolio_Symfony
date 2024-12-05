@@ -17,7 +17,10 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #1e3b50;
+
+    /* background-color: #0d223b; */
+    background: linear-gradient(to right, #0b1c3f, #1b254d);
+
     height: 100vh;
     position: fixed;
     left: 0;
@@ -33,7 +36,10 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #1e3b50;
+    
+    /* background-color: #0d223b; */
+    background: linear-gradient(to right, #0b1c3f, #1b254d);
+
     height: 100vh;
     position: fixed;
     left: 0;
@@ -54,7 +60,7 @@ body {
     left: 15px;
     z-index: 1001;
     cursor: pointer;
-    background-color: #1c5e6b;
+    background: linear-gradient(to right, #1c325e, #33458f);
     padding: 10px;
     border-radius: 5px;
     color: white;
@@ -97,7 +103,9 @@ body {
     display: block;
     color: white;
     text-decoration: none;
-    background-color: #338494;
+
+    background: linear-gradient(to right, #1c325e, #33458f);
+
     padding: 10px 20px;
     margin: 15px 0;
     border-radius: 5px;
@@ -245,7 +253,7 @@ p {
 hr {
     border: none; /* Supprime la bordure par défaut */
     height: 10px; /* Épaisseur de la ligne */
-    background-color: #2aadc4;
+    background: linear-gradient(to right, #2d5096, #4a65ce);
     border-radius: 10px; /* Arrondit légèrement les coins */
     margin: 20px 0; /* Ajoute de l'espace autour de la ligne */
     opacity: 0.8; /* Légèrement transparent pour un effet subtil */
@@ -335,7 +343,7 @@ hr:hover {
     height: 100%;
     overflow: hidden;
     z-index: -1; /* Permet de placer le fond derrière le contenu */
-    background: linear-gradient(to bottom, #4a92a8, #276d8b, #17435a); /* Dégradé inspiré de l'eau */
+    background: linear-gradient(to bottom, #070d25, #101736, #1b254d, #2c3a65);
 }
 
 .article-card {

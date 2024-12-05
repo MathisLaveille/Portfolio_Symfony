@@ -19,13 +19,13 @@
 
         <div class="row">
             {% for article in articles %}
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="article-card">
                         {% if article.image %}
                             <img src="{{ article.image }}" alt="Image de l'article">
                         {% endif %}
                         <div class="article-card-body">
-                            <h5>{{ article.title }}</h5>
+                            <h1>{{ article.title }}</h1>
                             <p>{{ article.description | slice(0, 150) }}...</p>
                             <a href="{{ article.link }}" target="_blank">Lire l'article</a>
                         </div>
